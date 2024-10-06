@@ -1,0 +1,74 @@
+﻿
+
+
+        <UserControl x:Class="JSiniDevTool.Views.Common.MessageDialog"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:domain="clr-namespace:JSiniDevTool.Views.Common"
+                      xmlns:JSiniDevTool="clr-namespace:JSiniDevTool"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:system="clr-namespace:System;assembly=mscorlib"
+             xmlns:wpf="clr-namespace:MaterialDesignThemes.Wpf;assembly=MaterialDesignThemes.Wpf" 
+                     xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             
+             d:DesignWidth="300"
+             mc:Ignorable="d">
+
+
+
+
+        <materialDesign:Card
+  
+  Padding="8"
+  Background="{DynamicResource PrimaryHueDarkBrush}"
+ >
+            <StackPanel
+   >
+
+                <TextBlock x:Name="Message"
+               Margin="0,20,0,10"
+                           HorizontalAlignment="Center"
+                       Text="Message Content"
+               FontSize="14" />
+
+
+                <Separator
+      Style="{StaticResource MaterialDesignLightSeparator}" />
+                <StackPanel
+      Margin="8,0,8,8"
+      HorizontalAlignment="Right"
+      Orientation="Horizontal">
+
+
+                    <Button Command="{x:Static wpf:DialogHost.CloseDialogCommand}"
+IsDefault="True"
+Style="{StaticResource MaterialDesignFlatButton}">
+                        <Button.CommandParameter>
+                            <system:Boolean>True</system:Boolean>
+                        </Button.CommandParameter>
+                        ACCEPT
+                    </Button>
+                    <Button Margin="8,0,0,0"
+Command="{x:Static wpf:DialogHost.CloseDialogCommand}"
+IsCancel="True"
+Style="{StaticResource MaterialDesignFlatButton}">
+                        <Button.CommandParameter>
+                            <system:Boolean>False</system:Boolean>
+                        </Button.CommandParameter>
+                        CANCEL
+                    </Button>
+
+
+                </StackPanel>
+            </StackPanel>
+        </materialDesign:Card>
+
+
+
+
+
+
+
+
+</UserControl>
