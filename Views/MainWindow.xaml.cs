@@ -186,5 +186,28 @@ namespace JSiniDevTool {
     }
 
 
+
+    private void Button_Click(object sender, RoutedEventArgs e) {
+    }
+
+    private void Button_Click_1(object sender, RoutedEventArgs e) {
+      if (this.WindowState == WindowState.Maximized) {
+        this.WindowState = WindowState.Normal;
+      }
+      else {
+        this.WindowState = WindowState.Maximized;
+      }
+    }
+
+    private void Button_Click_2(object sender, RoutedEventArgs e) {
+
+      if (this.WindowState == WindowState.Minimized) {
+        this.WindowState = WindowState.Normal;
+      }
+      else {
+        this.WindowState = WindowState.Minimized;
+      }
+    }
+
   }
 }

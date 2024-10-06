@@ -102,6 +102,16 @@
               </StackPanel>
 
 
+              <StackPanel Orientation="Horizontal" DockPanel.Dock="Right">
+
+                <Button Click="Button_Click_2">_</Button>
+                <Button Click="Button_Click_1">ㅁ</Button>
+                <Button  Click="Button_Click" HorizontalAlignment="Right">X</Button>
+
+              </StackPanel>
+
+              
+
               <materialDesign:PopupBox DockPanel.Dock="Right"
                                      PlacementMode="BottomAndAlignRightEdges"
                                      StaysOpen="False">
@@ -148,7 +158,7 @@
                        VerticalAlignment="Center"
                        AutomationProperties.Name="Material Design In XAML Toolkit"
                        FontSize="22"
-                       Text="Material Design In XAML Toolkit" />
+                       Text="JSini Tool" />
 
 
             </DockPanel>
